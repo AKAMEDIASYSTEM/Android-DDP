@@ -801,6 +801,25 @@ public class Meteor {
 		call("/"+collectionName+"/remove", new Object[] { query }, listener);
 	}
 
+	// AKA MESSIN HERE
+	/**
+	 * Sign in the user with the given Spotify token
+	 *
+	 * Please note that this requires the `accounts-password` package
+	 *
+	 * @param username the username to sign in with
+	 * @param password the password to sign in with
+	 * @param listener the listener to call on success/error
+	 */
+	public void loginWithSpotify(final String sToken, final ResultListener listener) {
+
+		call("loginWithSpotify", new Object[] {"showDialog": true, "requestPermissions": ["user-read-email",
+      "playlist-read-collaborative",
+      "streaming",
+      "user-library-read",
+      "user-top-read"]}, listener);
+	}
+
 	/**
 	 * Sign in the user with the given username and password
 	 *
