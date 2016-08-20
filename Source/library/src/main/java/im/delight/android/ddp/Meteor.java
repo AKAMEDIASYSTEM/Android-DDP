@@ -881,7 +881,7 @@ public class Meteor {
 	 * @param token the login token
 	 * @param listener the listener to call on success/error
 	 */
-	private void loginWithToken(final String token, final ResultListener listener) {
+	public void loginWithToken(final String token, final ResultListener listener) {
 		final Map<String, Object> authData = new HashMap<String, Object>();
 		authData.put("resume", token);
 
