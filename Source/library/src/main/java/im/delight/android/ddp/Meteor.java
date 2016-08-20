@@ -813,7 +813,7 @@ public class Meteor {
 	 */
 	public void loginWithSpotify(final String sToken, final ResultListener listener) {
 
-		call("loginWithSpotify", new Object[] {"showDialog": "true", "requestPermissions": ["user-read-email",
+		call("loginWithSpotify", new Object[] {showDialog: true, requestPermissions: ["user-read-email",
       "playlist-read-collaborative",
       "streaming",
       "user-library-read",
